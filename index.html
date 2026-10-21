@@ -3,6 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Biodata Diri</title>
+    <script>
+  // Menonaktifkan Klik Kanan (Context Menu)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Menonaktifkan Pintasan Keyboard untuk Inspect, View Source, dll.
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.keyCode == 123) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+Shift+C (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 67) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.keyCode == 85) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+S (Save Page)
+    if (e.ctrlKey && e.keyCode == 83) {
+      e.preventDefault();
+      return false;
+    }
+  });
+</script>
+
 </head>
 <body>
 
